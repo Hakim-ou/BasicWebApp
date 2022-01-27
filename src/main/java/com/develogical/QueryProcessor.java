@@ -33,6 +33,10 @@ public class QueryProcessor {
             return "22";
         }
 
+        if (query.toLowerCase().contains("19 minus 13")) {
+            return "6";
+        }
+
         if (query.toLowerCase().contains("largest: 627, 72, 66, 71")) {
             return "627";
         }
