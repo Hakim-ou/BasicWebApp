@@ -87,6 +87,12 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void knowsFibo1() throws Exception {
+        assertThat(queryProcessor.process("what is the 23rd number in the Fibonacci sequence"),
+                containsString("17711"));
+    }
+
+    @Test
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
