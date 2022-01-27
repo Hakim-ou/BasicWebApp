@@ -93,6 +93,12 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void knowsPrime3() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers are primes: 493, 353"),
+                containsString("353"));
+    }
+
+    @Test
     public void knowsFibo1() throws Exception {
         assertThat(queryProcessor.process("what is the 23rd number in the Fibonacci sequence"),
                 containsString("17711"));
