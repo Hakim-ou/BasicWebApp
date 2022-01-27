@@ -75,9 +75,15 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void knowsSquare() throws Exception {
+    public void knowsSquare1() throws Exception {
         assertThat(queryProcessor.process("which of the following numbers is both a square and a cube: 4096, 561"),
                 containsString("4096"));
+    }
+
+    @Test
+    public void knowsPrime1() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers are primes: 473, 849, 47, 223"),
+                containsString("47, 223"));
     }
 
     @Test
