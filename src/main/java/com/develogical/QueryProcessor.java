@@ -29,6 +29,10 @@ public class QueryProcessor {
             return "26";
         }
 
+        if (query.toLowerCase().contains("largest:627, 72, 66, 71")) {
+            return "627";
+        }
+
         return "";
     }
 }

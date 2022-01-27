@@ -33,7 +33,7 @@ public class QueryProcessorTest {
     }
 
     @Test
-    public void knowsLargestNb() throws Exception {
+    public void knowsLargest1() throws Exception {
         assertThat(queryProcessor.process("largest number"),
                 containsString("825"));
     }
@@ -43,10 +43,17 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("9 plus 14"),
                 containsString("23"));
     }
+
     @Test
     public void knows13Plus13() throws Exception {
         assertThat(queryProcessor.process("13 plus 13"),
                 containsString("26"));
+    }
+
+    @Test
+    public void knowsLargest2() throws Exception {
+        assertThat(queryProcessor.process("largest:627, 72, 66, 71"),
+                containsString("627"));
     }
 
     @Test
