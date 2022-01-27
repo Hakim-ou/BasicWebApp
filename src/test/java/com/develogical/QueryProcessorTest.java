@@ -51,6 +51,12 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void knowsPlus3() throws Exception {
+        assertThat(queryProcessor.process("4 plus 18"),
+                containsString("22"));
+    }
+
+    @Test
     public void knowsLargest2() throws Exception {
         assertThat(queryProcessor.process("largest: 627, 72, 66, 71"),
                 containsString("627"));
