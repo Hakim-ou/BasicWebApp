@@ -28,8 +28,8 @@ public class QueryProcessorTest {
 
     @Test
     public void knowsAboutUK() throws Exception {
-        assertThat(queryProcessor.process("UK"),
-                containsString("United"));
+        assertThat(queryProcessor.process("your name"),
+                containsString("Kimadil"));
     }
 
     @Test
